@@ -78,7 +78,7 @@
         android:background="@drawable/custom_edittext"
         android:drawableLeft="@drawable/baseline_email_24"
         android:fontFamily="@font/mulish_bold"
-        android:hint="    Password"
+        android:hint="    Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         android:textColor="@color/black"
