@@ -22,12 +22,6 @@
             android:name=".SignInContinueActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInContinue"
-            android:exported="false" />
-        <activity
-            android:name=".SignInActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -10,18 +10,18 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="237dp"
+        android:layout_width="391dp"
         android:layout_height="56dp"
         android:backgroundTint="@color/primary"
         android:fontFamily="@font/roboto_medium"
-        android:onClick="next"
+        android:onClick="signUp"
         android:text="Next"
         android:textSize="24sp"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email6"
+        app:layout_constraintTop_toBottomOf="@+id/c_password"
         app:layout_constraintVertical_bias="0.433" />
 
     <ImageView
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.006" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/email2"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -86,11 +86,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/email5"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -105,11 +105,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email2"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/email6"
+        android:id="@+id/c_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="30dp"
@@ -124,7 +124,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email5"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -150,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.302"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email2"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:layout_constraintVertical_bias="0.978" />
 
     <TextView
@@ -165,7 +165,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/email2"
+        app:layout_constraintTop_toBottomOf="@+id/c_password"
         app:layout_constraintVertical_bias="0.978" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
