@@ -17,16 +17,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
     }
 
-    public void log_out(View view) {
-        FirebaseAuth.getInstance().signOut();
-        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean("isLoggedIn", false);
-        editor.apply();
-        Intent intent = new Intent(this, SignInContinueActivity.class);
+    public void account(View view) {
+        Intent intent = new Intent(HomeActivity.this, AccountActivity.class);
         startActivity(intent);
-        finish();
     }
-
 
 }

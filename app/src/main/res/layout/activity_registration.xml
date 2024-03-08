@@ -10,7 +10,7 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="391dp"
+        android:layout_width="291dp"
         android:layout_height="56dp"
         android:backgroundTint="@color/primary"
         android:fontFamily="@font/roboto_medium"
@@ -161,11 +161,12 @@
         android:text="Sign In"
         android:textColor="#AE8F53"
         android:textSize="20sp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/c_password"
-        app:layout_constraintVertical_bias="0.978" />
+        app:layout_constraintVertical_bias="0.961" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
