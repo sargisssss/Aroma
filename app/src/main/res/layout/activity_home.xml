@@ -4,164 +4,179 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@color/light_gray">
-    <ImageView
-        android:id="@+id/profile"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:clickable="true"
-        android:onClick="Log_out"
+    android:background="@color/light_gray"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="350dp"
-        android:src="@drawable/profile"/>
+        android:layout_marginEnd="18dp">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="325dp"
+            android:clickable="true"
+            android:onClick="log_out"
+            android:src="@drawable/profile" />
 
 
-<!--    <TextView-->
-<!--        android:layout_marginBottom="@+id/profile"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="25dp"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:fontFamily="@font/mulish_bold"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="News &amp; Community"-->
-<!--        />-->
+        <TextView
+            android:id="@+id/news_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/profile"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="News &amp; Community"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="90dp">
 
-<!--    <HorizontalScrollView-->
-<!--        android:id="@+id/horizontalScrollView"-->
-<!--        android:layout_width="380dp"-->
-<!--        android:layout_height="137dp"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:foregroundGravity="top"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.49"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.311">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:foregroundGravity="center"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="horizontal">-->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/candle1" />
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/secondary"-->
-<!--                android:orientation="vertical">-->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/candle1" />
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:srcCompat="@drawable/photo" />-->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/candle1" />
 
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/candle1" />
+            </LinearLayout>
+        </HorizontalScrollView>
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/secondary"-->
-<!--                android:orientation="vertical">-->
+        <TextView
+            android:id="@+id/new_arrivals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal_scroll"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="New Arrivals"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:srcCompat="@drawable/photo" />-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        <HorizontalScrollView
+            android:id="@+id/new_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginTop="380dp">
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/secondary"-->
-<!--                android:orientation="vertical">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:srcCompat="@drawable/photo" />-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/candle2"
+                    android:orientation="vertical">
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="300dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginEnd="10dp"-->
-<!--                android:background="@color/secondary"-->
-<!--                android:orientation="vertical">-->
+                    <ImageView
+                        android:id="@+id/fav1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:srcCompat="@drawable/fav_icon" />
 
-<!--                <ImageView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:srcCompat="@drawable/photo" />-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                    <TextView
+                        android:id="@+id/gray_candle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="190dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Gray Candle"
+                        android:textColor="@color/white"
+                        android:textSize="29sp" />
 
+                    <TextView
+                        android:id="@+id/price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="$15.18"
+                        android:textColor="@color/white"
+                        android:textSize="23sp" />
+                </LinearLayout>
 
-<!--        </LinearLayout>-->
-<!--    </HorizontalScrollView>-->
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/candle3"
+                    android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/fav2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|right"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:srcCompat="@drawable/fav_icon" />
 
+                    <TextView
+                        android:id="@+id/flower_candle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="190dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Flower Candle"
+                        android:textColor="@color/white"
+                        android:textSize="29sp" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/New_arr"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="New Arrivals"-->
-<!--        android:layout_below="@+id/horizontalScrollView"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:fontFamily="@font/mulish_bold"/>-->
+                    <TextView
+                        android:id="@+id/price2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="$12.10"
+                        android:textColor="@color/white"
+                        android:textSize="23sp" />
+                </LinearLayout>
 
+            </LinearLayout>
+        </HorizontalScrollView>
 
-<!--    <HorizontalScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/New_arr"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        >-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="170dp"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="h"-->
-
-<!--        </LinearLayout>-->
-<!--    </HorizontalScrollView>-->
-
-
-
-
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
