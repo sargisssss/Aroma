@@ -14,18 +14,18 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="18dp">
 
-        <ImageView
-            android:id="@+id/profile"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="325dp"
-            android:clickable="true"
-            android:onClick="account"
-            android:src="@drawable/profile" />
-
-
         <TextView
             android:id="@+id/news_community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/primary_deep"
+            android:textSize="35sp"                         />
+
+        <TextView
+            android:id="@+id/aroma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -49,16 +49,17 @@
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/candle1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
+                        android:layout_marginTop="140dp"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="How to Choose the Right Candle for Your Mood and Personality..."
+                        android:text="How to Choose the Right Candle for Your Mood and..."
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="19sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -66,16 +67,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle4"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
+                        android:layout_marginTop="140dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="The Best Candles for Every Season and Occasion..."
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="19sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -83,16 +85,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle5"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
+                        android:layout_marginTop="140dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="What You Need to Know About Candle Safety and Care..."
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="19sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -100,16 +103,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle6"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
+                        android:layout_marginTop="140dp"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="The Benefits of Aromatherapy Candles for Stress Relief and Relaxation..."
+                        android:text="The Benefits of Aromatherapy Candles for Stress Relief and..."
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="19sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -117,16 +121,17 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle7"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
+                        android:layout_marginTop="140dp"
                         android:fontFamily="@font/roboto_medium"
-                        android:text="How to Create a Romantic Atmosphere with Candles and Music..."
+                        android:text="How to Create a Romantic Atmosphere with Candles..."
                         android:textColor="@color/white"
-                        android:textSize="20sp" />
+                        android:textSize="19sp" />
                 </LinearLayout>
 
 
@@ -263,6 +268,13 @@
             app:srcCompat="@drawable/catalog" />
 
         <ImageView
+            android:id="@+id/heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
             android:id="@+id/cart"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -276,6 +288,6 @@
             android:layout_margin="20dp"
             android:clickable="true"
             android:onClick="account"
-            app:srcCompat="@drawable/baseline_person_50" />
+            app:srcCompat="@drawable/baseline_person_40" />
     </LinearLayout>
 </RelativeLayout>

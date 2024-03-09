@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/back"
-        android:layout_width="56dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
@@ -20,13 +20,12 @@
         android:id="@+id/profile_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/back"
         android:fontFamily="@font/mulish_bold"
         android:text="Profile"
         android:textColor="@color/black"
-        android:textSize="25sp" />
+        android:textSize="35sp" />
 
     <ImageView
         android:id="@+id/profile_image"
@@ -88,8 +87,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
-            android:clickable="true"
-            android:onClick="back"
             app:srcCompat="@drawable/home" />
 
         <ImageView
@@ -98,6 +95,13 @@
             android:layout_height="40dp"
             android:layout_margin="20dp"
             app:srcCompat="@drawable/catalog" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/heart" />
 
         <ImageView
             android:id="@+id/cart"
@@ -111,6 +115,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
-            app:srcCompat="@drawable/baseline_person_50" />
+            android:clickable="true"
+            android:onClick="account"
+            app:srcCompat="@drawable/baseline_person_40" />
     </LinearLayout>
 </RelativeLayout>
