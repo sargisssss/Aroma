@@ -9,4 +9,5 @@
     <color name="primary">#DED0B6</color>
     <color name="primary_deep">#BBAB8C</color>
     <color name="secondary_deep">#FAEED1</color>
+    <color name="red">#E61212</color>
 </resources>

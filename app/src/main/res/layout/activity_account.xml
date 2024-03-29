@@ -33,6 +33,7 @@
         android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
+        android:clickable="true"
         android:src="@drawable/profile" />
 
     <TextView
@@ -44,7 +45,6 @@
         android:layout_marginStart="200dp"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/mulish_semibold"
-        android:text="Sargis"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
@@ -57,7 +57,6 @@
         android:layout_marginStart="200dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/mulish_semibold"
-        android:text="sargis.arakelyan.33@gmail.com"
         android:textColor="@color/gray_text"
         android:textSize="12sp" />
 
@@ -66,12 +65,25 @@
         android:layout_width="253dp"
         android:layout_height="65dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="450dp"
         android:backgroundTint="@color/primary"
         android:fontFamily="@font/roboto_medium"
         android:onClick="log_out"
         android:text="LOG OUT"
         android:textSize="24sp"
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="253dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/roboto_medium"
+        android:onClick="deleteAccount"
+        android:text="DELETE ACCOUNT"
+        android:textSize="22sp"
         app:cornerRadius="30dp" />
 
     <LinearLayout
@@ -87,6 +99,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
+            android:onClick="back"
             app:srcCompat="@drawable/home" />
 
         <ImageView

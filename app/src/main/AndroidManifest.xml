@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Aroma"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity1"
+            android:exported="false" />
+        <activity
             android:name=".CatalogActivity"
             android:exported="false" />
         <activity
@@ -28,7 +46,8 @@
             android:name=".SignInContinueActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

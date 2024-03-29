@@ -22,4 +22,29 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void blog1(View view) {
+        Intent intent = new Intent(HomeActivity.this, BlogActivity1.class);
+        startActivity(intent);
+    }
+
+    public void blog2(View view) {
+        Intent intent = new Intent(HomeActivity.this, BlogActivity2.class);
+        startActivity(intent);
+    }
+
+    public void blog3(View view) {
+        Intent intent = new Intent(HomeActivity.this, BlogActivity3.class);
+        startActivity(intent);
+    }
+
+    public void blog4(View view) {
+        Intent intent = new Intent(HomeActivity.this, BlogActivity4.class);
+        startActivity(intent);
+    }
+
+    public void blog5(View view) {
+        Intent intent = new Intent(HomeActivity.this, BlogActivity5.class);
+        startActivity(intent);
+    }
+
 }

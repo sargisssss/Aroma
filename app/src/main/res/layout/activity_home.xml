@@ -22,7 +22,7 @@
             android:fontFamily="@font/roboto_bold"
             android:text="@string/app_name"
             android:textColor="@color/primary_deep"
-            android:textSize="35sp"                         />
+            android:textSize="35sp" />
 
         <TextView
             android:id="@+id/aroma"
@@ -49,6 +49,8 @@
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/candle1"
+                    android:clickable="true"
+                    android:onClick="blog1"
                     android:orientation="vertical"
                     android:padding="8dp">
 
@@ -67,6 +69,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle4"
+                    android:clickable="true"
+                    android:onClick="blog2"
                     android:orientation="vertical"
                     android:padding="8dp">
 
@@ -85,6 +89,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle5"
+                    android:clickable="true"
+                    android:onClick="blog3"
                     android:orientation="vertical"
                     android:padding="8dp">
 
@@ -103,6 +109,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle6"
+                    android:clickable="true"
+                    android:onClick="blog4"
                     android:orientation="vertical"
                     android:padding="8dp">
 
@@ -121,6 +129,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="12dp"
                     android:background="@drawable/candle7"
+                    android:clickable="true"
+                    android:onClick="blog5"
                     android:orientation="vertical"
                     android:padding="8dp">
 

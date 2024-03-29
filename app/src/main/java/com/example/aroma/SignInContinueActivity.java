@@ -3,24 +3,22 @@ package com.example.aroma;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import android.Manifest;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignInContinueActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -28,6 +26,8 @@ public class SignInContinueActivity extends AppCompatActivity {
 
     EditText emailEditText;
     EditText passwordEditText;
+    TextView error_text;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +37,7 @@ public class SignInContinueActivity extends AppCompatActivity {
 
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
+        error_text = findViewById(R.id.error_text);
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
@@ -44,11 +45,7 @@ public class SignInContinueActivity extends AppCompatActivity {
         if (isLoggedIn) {
             startActivity(new Intent(this, HomeActivity.class));
             finish();
-        } else {
-
         }
-
-
     }
 
     public void back(View view) {
@@ -60,26 +57,39 @@ public class SignInContinueActivity extends AppCompatActivity {
         Intent intent = new Intent(SignInContinueActivity.this, RegistrationActivity.class);
         startActivity(intent);
     }
+
     public void signIn(View v) {
-        String email = emailEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        final String email = emailEditText.getText().toString();
+        final String password = passwordEditText.getText().toString();
+
+        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            error_text.setText("All fields are required");
+            return;
+        }
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("isLoggedIn", true);
-                            editor.apply();
+                            FirebaseUser user = mAuth.getCurrentUser();
 
-                            Intent intent = new Intent(SignInContinueActivity.this, HomeActivity.class);
-                            startActivity(intent);
+                            if (user != null ) {
+//                                && user.isEmailVerified()
+                                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putBoolean("isLoggedIn", true);
+                                editor.apply();
+
+                                Intent intent = new Intent(SignInContinueActivity.this, HomeActivity.class);
+                                startActivity(intent);
+                            } else {
+                                mAuth.signOut();
+                                error_text.setText("Email is not verified. Please verify your email.");
+                            }
                         } else {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(SignInContinueActivity.this, "Authentication failed: " + task.getException().getMessage(),
-                                    Toast.LENGTH_SHORT).show();
+                            error_text.setText("Authentication failed: " + task.getException().getMessage());
                         }
                     }
                 });
