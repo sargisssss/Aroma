@@ -74,8 +74,7 @@ public class SignInContinueActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
 
-                            if (user != null ) {
-//                                && user.isEmailVerified()
+                            if (user != null && user.isEmailVerified()) {
                                 SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putBoolean("isLoggedIn", true);

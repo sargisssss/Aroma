@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/mulish_bold"
-            android:text="News &amp; Community"
+            android:text="Blog &amp; News"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -275,6 +275,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:onClick="catalog"
             app:srcCompat="@drawable/catalog" />
 
         <ImageView

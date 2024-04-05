@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ import android.Manifest;
 
 public class AccountActivity extends AppCompatActivity {
     TextView nameTextView, emailTextView;
+    Button addProductButton;
     private static final int REQUEST_CODE_STORAGE_PERMISSION = 100;
 
     @Override
@@ -40,9 +42,17 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
         nameTextView = findViewById(R.id.name);
         emailTextView = findViewById(R.id.email);
+        addProductButton = findViewById(R.id.addProduct);
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
+            String currentUserEmail = currentUser.getEmail();
+            if (currentUserEmail != null && currentUserEmail.equals("sargis.arakelyan33@gmail.com")) {
+                addProductButton.setVisibility(View.VISIBLE);
+            } else {
+                addProductButton.setVisibility(View.GONE);
+            }
+
             FirebaseFirestore db = FirebaseFirestore.getInstance();
             DocumentReference userRef = db.collection("users").document(currentUser.getUid());
             userRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -81,7 +91,7 @@ public class AccountActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CODE_STORAGE_PERMISSION) {
-                selectProfileImage();
+            selectProfileImage();
         }
     }
 
@@ -108,9 +118,18 @@ public class AccountActivity extends AppCompatActivity {
         profileImage.setImageURI(imageUri);
     }
 
-
     public void back(View view) {
         Intent intent = new Intent(AccountActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void catalog(View view) {
+        Intent intent = new Intent(AccountActivity.this, CatalogActivity.class);
+        startActivity(intent);
+    }
+
+    public void addProduct(View view) {
+        Intent intent = new Intent(AccountActivity.this, UploadActivity.class);
         startActivity(intent);
     }
 

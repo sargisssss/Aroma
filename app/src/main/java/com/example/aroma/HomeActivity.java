@@ -22,6 +22,11 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void catalog(View view) {
+        Intent intent = new Intent(HomeActivity.this, CatalogActivity.class);
+        startActivity(intent);
+    }
+
     public void blog1(View view) {
         Intent intent = new Intent(HomeActivity.this, BlogActivity1.class);
         startActivity(intent);

@@ -61,7 +61,20 @@
         android:textSize="12sp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/addProduct"
+        android:layout_width="253dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/roboto_medium"
+        android:onClick="addProduct"
+        android:text="Add Product"
+        android:textSize="24sp"
+        app:cornerRadius="30dp" />
+
+    <Button
+        android:id="@+id/logOut"
         android:layout_width="253dp"
         android:layout_height="65dp"
         android:layout_centerHorizontal="true"
@@ -107,6 +120,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:onClick="catalog"
             app:srcCompat="@drawable/catalog" />
 
         <ImageView

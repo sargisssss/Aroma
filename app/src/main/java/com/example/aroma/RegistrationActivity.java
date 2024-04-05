@@ -125,8 +125,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                             sendEmailVerification(user);
                                         }
                                     });
-                            Intent intent = new Intent(RegistrationActivity.this, SignInContinueActivity.class);
-                            startActivity(intent);
+                            sendEmailVerification(user);
                         } else {
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             error_text.setText("Authentication failed: " + task.getException().getMessage());
@@ -136,7 +135,6 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
 
-
     private void sendEmailVerification(FirebaseUser user) {
         user.sendEmailVerification()
                 .addOnCompleteListener(this, new OnCompleteListener<Void>() {
@@ -144,7 +142,6 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "Email sent.");
-                            Toast.makeText(RegistrationActivity.this, "Verification email sent. Please check your inbox (including spam) to verify your account.", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(RegistrationActivity.this, SignInContinueActivity.class);
                             startActivity(intent);
                         } else {
@@ -155,6 +152,7 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     }
                 });
-    }
 
+
+    }
 }
