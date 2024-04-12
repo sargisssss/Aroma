@@ -123,8 +123,28 @@ public class AccountActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void account(View view) {
+        Intent intent = new Intent(AccountActivity.this, AccountActivity.class);
+        startActivity(intent);
+    }
+
+    public void home(View view) {
+        Intent intent = new Intent(AccountActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void likedItems(View view) {
+        Intent intent = new Intent(AccountActivity.this, LikedItemsActivity.class);
+        startActivity(intent);
+    }
+
     public void catalog(View view) {
         Intent intent = new Intent(AccountActivity.this, CatalogActivity.class);
+        startActivity(intent);
+    }
+
+    public void cart(View view) {
+        Intent intent = new Intent(AccountActivity.this, CartActivity.class);
         startActivity(intent);
     }
 

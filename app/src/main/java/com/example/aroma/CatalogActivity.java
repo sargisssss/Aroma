@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.appcompat.widget.SearchView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -34,8 +35,24 @@ public class CatalogActivity extends AppCompatActivity {
         Intent intent = new Intent(CatalogActivity.this, AccountActivity.class);
         startActivity(intent);
     }
+
     public void home(View view) {
         Intent intent = new Intent(CatalogActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    public void likedItems(View view) {
+        Intent intent = new Intent(CatalogActivity.this, LikedItemsActivity.class);
+        startActivity(intent);
+    }
+
+    public void catalog(View view) {
+        Intent intent = new Intent(CatalogActivity.this, CatalogActivity.class);
+        startActivity(intent);
+    }
+
+    public void cart(View view) {
+        Intent intent = new Intent(CatalogActivity.this, CartActivity.class);
         startActivity(intent);
     }
 
@@ -89,6 +106,7 @@ public class CatalogActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String newText) {
                 searchList(newText);
@@ -97,10 +115,10 @@ public class CatalogActivity extends AppCompatActivity {
         });
     }
 
-    public void searchList(String text){
+    public void searchList(String text) {
         ArrayList<DataClass> searchList = new ArrayList<>();
-        for (DataClass dataClass: dataList){
-            if (dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())){
+        for (DataClass dataClass : dataList) {
+            if (dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())) {
                 searchList.add(dataClass);
             }
         }

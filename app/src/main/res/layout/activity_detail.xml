@@ -4,51 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/light_gray"
     tools:context=".DetailActivity">
 
     <TextView
         android:id="@+id/detailTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="Title"
         android:textColor="@color/primary_deep"
-        android:textSize="24sp"
-        android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/detailImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/uploadimg"
-        android:layout_marginBottom="16dp" />
+        android:src="@drawable/uploadimg" />
 
     <TextView
         android:id="@+id/detailDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Description"
-        android:textColor="@color/primary_deep"
-        android:textSize="18sp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="8dp"
+        android:text="Description"
+        android:textColor="@color/primary_deep"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/detailPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price"
-        android:textColor="@color/primary_deep"
-        android:textSize="18sp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:paddingBottom="16dp" />
+        android:paddingBottom="16dp"
+        android:text="Price"
+        android:textColor="@color/primary_deep"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_favorite_border_24"
+        android:background="@android:color/transparent"
+        android:contentDescription="heart"/>
+
+
 
     <RelativeLayout
         android:id="@+id/delete_edit"

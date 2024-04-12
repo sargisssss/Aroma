@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Aroma"
         tools:targetApi="31">
         <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LikedItemsActivity"
+            android:exported="false" />
+        <activity
             android:name=".UpdateActivity"
             android:exported="false" />
         <activity

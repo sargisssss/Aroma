@@ -112,7 +112,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
-            android:onClick="back"
+            android:clickable="true"
+            android:onClick="home"
             app:srcCompat="@drawable/home" />
 
         <ImageView
@@ -129,6 +130,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:onClick="likedItems"
             app:srcCompat="@drawable/heart" />
 
         <ImageView
@@ -136,6 +139,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="20dp"
+            android:clickable="true"
+            android:onClick="cart"
             app:srcCompat="@drawable/cart" />
 
         <ImageView
@@ -147,4 +152,5 @@
             android:onClick="account"
             app:srcCompat="@drawable/baseline_person_40" />
     </LinearLayout>
+
 </RelativeLayout>
